@@ -3,7 +3,7 @@ var app = express();
 var cons = require('consolidate');
 
 
-// assign the swig engine to .html files
+// assign the underscore engine to .html files
 app.engine('html', cons.underscore);
 
 // set .html as the default extension 
