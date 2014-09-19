@@ -3,7 +3,7 @@ var app = express();
 var cons = require('consolidate');
 
 
-// assign the swig engine to .html files
+// assign the underscore engine to .html files
 app.engine('html', cons.underscore);
 
 // set .html as the default extension 
@@ -15,6 +15,10 @@ app.get('/', function(req, res){
     title: 'Consolidate.js'
   });
 });
+//res.locals is an empty object it gives you, 
+//so you could define res.locals.title
+
+//also app.use takes a function and gets called everytime a request is made
 
 //defines the route /hello.txt
 app.get('/hello.txt', function(req, res){
